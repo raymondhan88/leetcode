@@ -13,10 +13,10 @@ class Solution:
             minx = min(minx, rectangle[0])
             miny = min(miny, rectangle[1])
 
-            dic[(rectangle[0],rectangle[2])] +=1
+            dic[(rectangle[0],rectangle[1])] +=1
             dic[(rectangle[0],rectangle[3])] +=1
-            dic[(rectangle[1],rectangle[2])] +=1
-            dic[(rectangle[1],rectangle[3])] +=1
+            dic[(rectangle[2],rectangle[1])] +=1
+            dic[(rectangle[2],rectangle[3])] +=1
 
         if area !=  (maxx-minx) * (maxy - miny) or dic[(maxx,maxy)]!=1 or dic[(maxx,miny)]!=1 or dic[(minx,maxy)]!=1 or dic[(minx,miny)]!=1 :
             return False
